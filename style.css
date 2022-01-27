@@ -238,10 +238,6 @@ header .container {
   display: none;
 }
 
-.big-wrapper.light .toggle-btn i:first-child {
-  display: none;
-}
-
 .big-wrapper.dark .toggle-btn i:last-child {
   display: block;
 }
