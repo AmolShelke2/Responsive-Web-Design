@@ -231,7 +231,7 @@ header .container {
 }
 
 .toggle-btn:hover {
-  background: var(--mainColor);
+  background: var(--hoverColor);
 }
 
 .big-wrapper.light .toggle-btn i:last-child {
