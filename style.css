@@ -177,10 +177,6 @@ header .container {
   transform: translateY(0) rotate(-45deg);
 }
 
-.big-wrapper.active .bar::before {
-  transform: translateY(0) rotate(-45deg);
-}
-
 .big-wrapper.active .bar::after {
   transform: translateY(0) rotate(45deg);
 }
@@ -208,7 +204,7 @@ header .container {
 }
 
 .showcase-area .btn {
-  box-sizing: 0 0 40px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.05);
 }
 
 .person {
