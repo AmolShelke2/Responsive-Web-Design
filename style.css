@@ -215,8 +215,8 @@ header .container {
 .toggle-btn {
   display: inline-block;
   border: none;
-  background: var(--darkTwo);
-  color: var(--backgroundColor);
+  background: var(--backgroundColor);
+  color: var(--darkTwo);
   outline: none;
   cursor: pointer;
   height: 39px;
