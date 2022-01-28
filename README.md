@@ -10,5 +10,10 @@ This is a Responsive Landing Page created with HTML CSS It has no interactivity 
 
 
 ## Demo
-![192 168 125 73_5500_index html](https://user-images.githubusercontent.com/95171638/151581792-1439925f-d5fc-40a4-b50b-837900bac2d5.png)
 
+![192 168 125 73_5500_index html (1)](https://user-images.githubusercontent.com/95171638/151582065-d834b52b-a4dd-4d67-8e73-8690183ffa1e.png)
+
+## Connect With Me
+
+[Linkedin](https://www.linkedin.com/in/amol-shelke-627813220/)
+[Twitter](https://twitter.com/Amol_shelke09)
