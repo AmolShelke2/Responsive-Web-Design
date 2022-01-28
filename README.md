@@ -15,5 +15,5 @@ This is a Responsive Landing Page created with HTML CSS It has no interactivity 
 
 ## Connect With Me
 
-[Linkedin](https://www.linkedin.com/in/amol-shelke-627813220/)
+[Linkedin](https://www.linkedin.com/in/amol-shelke-627813220/)                                                                                                                  
 [Twitter](https://twitter.com/Amol_shelke09)
