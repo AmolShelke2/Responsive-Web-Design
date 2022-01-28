@@ -4,3 +4,9 @@ This is a Responsive Landing Page created with HTML CSS It has no interactivity 
 
 
 ## technologies 
+- HTML 
+- CSS 
+- JavaScript
+
+
+## DEMO
