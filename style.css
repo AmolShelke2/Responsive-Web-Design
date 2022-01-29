@@ -105,6 +105,7 @@ header .container {
 .links a:hover {
   color: var(--hoverColor);
 }
+
 .btn {
   display: inline-block;
   padding: 0.9rem 1.9rem;
@@ -112,7 +113,7 @@ header .container {
   background-color: var(--mainColor);
   border-radius: 16px;
   text-transform: capitalize;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
 .btn:hover {
@@ -171,7 +172,19 @@ header .container {
   background: var(--mainColor);
 }
 
-.toggle-btn i:last-child {
+.big-wrapper.light .toggle-btn i:last-child {
+  display: none;
+}
+
+.big-wrapper.light .toggle-btn i:first-child {
+  display: block;
+}
+
+.big-wrapper.dark .toggle-btn i:last-child {
+  display: block;
+}
+
+.big-wrapper.dark .toggle-btn i:first-child {
   display: none;
 }
 
