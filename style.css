@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Roboto&display=swap");
 
-:root {
+.light {
   --mainColor: #64bcf4;
   --hoverColor: #5bacdf;
   --backgroundColor: #f1f8fc;
@@ -39,6 +39,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
 .container {
@@ -162,4 +163,13 @@ header .container {
 
 .toggle-btn i:last-child {
   display: none;
+}
+
+.shape {
+  position: absolute;
+  z-index: 0;
+  width: 500px;
+  bottom: -100px;
+  left: -15px;
+  opacity: 0.1;
 }
