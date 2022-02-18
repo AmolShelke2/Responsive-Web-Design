@@ -32,6 +32,11 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
 img {
   width: 100%;
 }
@@ -44,6 +49,7 @@ a {
   padding: 1.7rem 0.2rem;
   width: 100%;
   min-height: 100vh;
+  overflow: hidden;
   background-color: var(--backgroundColor);
   display: flex;
   flex-direction: column;
@@ -60,10 +66,19 @@ a {
   z-index: 10;
 }
 
+header {
+  position: relative;
+  z-index: 70;
+}
+
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.overlay {
+  display: none;
 }
 
 .logo {
@@ -75,17 +90,14 @@ header .container {
 .logo img {
   width: 40px;
   margin-right: 0.6rem;
+  margin-top: -0.6rem;
 }
 
 .logo h3 {
-  color: var(--darkOne);
+  color: var(--darkTwo);
   font-size: 1.55rem;
   line-height: 1.2;
   font-weight: 700;
-}
-
-.logo img {
-  width: 40px;
 }
 
 .links ul {
@@ -103,6 +115,7 @@ header .container {
 
 .links a:hover {
   color: var(--hoverColor);
+  transform: scale(1.05);
 }
 
 .btn {
@@ -117,6 +130,59 @@ header .container {
 
 .btn:hover {
   background-color: var(--hoverColor);
+  transform: scale(1) !important;
+}
+
+.hamburger-menu {
+  position: relative;
+  z-index: 99;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  display: none;
+}
+
+.hamburger-menu .bar {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background-color: var(--darkTwo);
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
+.bar::before,
+.bar::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--darkTwo);
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
+.bar::before {
+  transform: translateY(-8px);
+}
+
+.bar::after {
+  transform: translateY(8px);
+}
+
+.big-wrapper.active .hamburger-menu .bar {
+  background-color: transparent;
+}
+
+.big-wrapper.active .bar::before {
+  transform: translateY(0), rotate(-45deg);
+}
+
+.big-wrapper.active .bar::after {
+  transform: translateY(0), rotate(45deg);
 }
 
 .showcase-area .container {
@@ -154,6 +220,7 @@ header .container {
   display: inline-block;
   border: none;
   background-color: var(--darkTwo);
+  outline: none;
   color: var(--backgroundColor);
   cursor: pointer;
   height: 39px;
@@ -194,4 +261,133 @@ header .container {
   bottom: -100px;
   left: -15px;
   opacity: 0.1;
+}
+
+.copy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  animation: appear 1s 1 both;
+}
+
+@keyframes appear {
+  0% {
+    clip-path: circle(30% at -25% -25%);
+  }
+  100% {
+    clip-path: circle(150% at 0 0);
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    max-width: 450px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--mainColor);
+    z-index: 95;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(100%);
+    transition: 0.5s;
+  }
+
+  .links ul {
+    flex-direction: column;
+  }
+
+  .links a {
+    color: #fff;
+    margin-left: 0;
+    padding: 2rem 0;
+  }
+
+  .links .btn {
+    background: none;
+  }
+
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.07);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+
+  .big-wrapper.active .links {
+    transform: translateX(0);
+    box-shadow: 0 0 50px 2px rgba(0, 0, 0, 0.04);
+  }
+
+  .big-wrapper.active .overlay {
+    pointer-events: all;
+    opacity: 1;
+  }
+
+  .showcase-area {
+    padding: 2.5rem 0;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .showcase-area .container {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    grid-gap: 2rem;
+  }
+
+  .big-title {
+    font-size: 1.1rem;
+  }
+
+  .text {
+    font-size: 0.95rem;
+    margin: 1.4rem 0 1.5rem;
+  }
+
+  .person {
+    width: 100%;
+    transform: none;
+  }
+
+  .logo h3 {
+    font-size: 1.25rem;
+  }
+
+  .shape {
+    bottom: -180px;
+    left: -150px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .big-title {
+    font-size: 0.9rem;
+  }
+
+  .text {
+    margin: 1.1rem 0 1.5rem;
+  }
+
+  .showcase-area .btn {
+    font-size: 0.8rem;
+  }
 }
